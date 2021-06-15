@@ -3,6 +3,25 @@ import tkinter as tk
 from tkinter import messagebox
 
 
+class definicionDePersonajes:
+    def __init__(self):
+        self.Tipo = []
+        self.Sexo = []
+        self.NombreCompleto = []
+        self.AlterEgo = []
+        self.caracteristicas = []
+
+    def agregarCaracteristicas(self,velocidad,fuerza,inteligencia,defensa,magia,telepatia,
+                               estrategia,volar,elasticidad,regeneracion):
+        
+        self.caracteristicas += [[velocidad,fuerza,inteligencia,defensa,magia,telepatia,
+                                  estrategia,volar,elasticidad,regeneracion]]
+        
+        
+        
+
+
+
 def ventanaPrincipal():
     pantalla = tk.Tk()
     pantalla.geometry("600x300")
@@ -39,10 +58,9 @@ def ventanaPrincipal():
         Leer = Archivo.readlines()
         if("Nombre completo:"+Nombre+"\n") in Leer:
             if("Nombre de usuario:"+Usuario+"\n") in Leer:
-                if 
+              return ""  
+
         
-        Modificar3(Nombre,Direccion,Provincia,Señas,leer,indice)
-        Modificar.destroy()
 
 
 
@@ -69,4 +87,4 @@ def leer_archivo_claves():
 
 
 
-ventanaPrincipal()
+#ventanaPrincipal()
