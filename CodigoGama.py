@@ -54,29 +54,29 @@ class General:
 
         def crear_borrar_character():
             G.crear_borrar_character()
-        boton1 = tk.Button(pantalla,text = "Nuevo Character",font=("Times new roman","12"),
+        boton1 = tk.Button(pantalla,text = "Nuevo Character",font=("Times new roman","12"),bg = ("#F57F17"),
                           command =crear_borrar_character)
-        boton1.place(x=300,y=130)
+        boton1.place(x=100,y=60)
 
-        def eliminar_character():
+        def crear_borrar_torneo():
             G.crear_borrar_torneo()
-        boton2 = tk.Button(pantalla,text = "Nuevo Torneo",font=("Times new roman","12"),
-                          command =eliminar_character)
-        boton2.place(x=300,y=160)
+        boton2 = tk.Button(pantalla,text = "Nuevo Torneo",font=("Times new roman","12"),bg = ("#F57F17"),
+                          command =crear_borrar_torneo)
+        boton2.place(x=400,y=60)
 
         #def estadisticas():
         
-        boton3 = tk.Button(pantalla,text = "Estadisticas",font=("Times new roman","12"))
-        boton3.place(x=300,y=190)
+        boton3 = tk.Button(pantalla,text = "Estadisticas",font=("Times new roman","12"),bg = ("#F57F17"))
+        boton3.place(x=266,y=20)
 
         #def start():
     
-        boton4 = tk.Button(pantalla,text = "START",font=("Times new roman","12"))
-        boton4.place(x=300,y=220)
+        boton4 = tk.Button(pantalla,text = "START",font=("Times new roman","12"),bg = ("#F57F17"))
+        boton4.place(x=277,y=100)
 
-        boton5 = tk.Button(pantalla,text = "Salir",font=("Times new roman","12"),
+        boton5 = tk.Button(pantalla,text = "Salir",font=("Times new roman","12"),bg = ("#F57F17"),
                           command = pantalla.destroy)
-        boton5.place(x=300,y=250)
+        boton5.place(x=285,y=180)
 
         
     def ventanaPrincipal(self):
@@ -231,8 +231,8 @@ class General:
         combo7['values'] = cont
         combo7.place(x=40,y=290)
 
-        etiquetaElectricidad=tk.Label(pantalla,bg = "orange",text="Electricidad:",font=("Modern No. 20","12"))
-        etiquetaElectricidad.place(x=360,y=260)
+        etiquetaElasticidad=tk.Label(pantalla,bg = "orange",text="Elasticidad:",font=("Modern No. 20","12"))
+        etiquetaElasticidad.place(x=360,y=260)
 
         combo8 = ttk.Combobox(pantalla)
         combo8['values'] = cont
@@ -270,7 +270,7 @@ class General:
 
          
 
-    def validar_character(self,tipo,genero,nombre,alterEgo,velocidad,fuerza,inteligencia,defensa,magia,telepatia,estratega,electricidad,volar,regeneracion):
+    def validar_character(self,tipo,genero,nombre,alterEgo,velocidad,fuerza,inteligencia,defensa,magia,telepatia,estratega,elasticidad,volar,regeneracion):
         velocidad = int(velocidad)
         fuerza = int(fuerza)
         inteligencia = int(inteligencia)
@@ -278,11 +278,11 @@ class General:
         magia = int(magia)
         telepatia = int(telepatia)
         estratega = int(estratega)
-        electricidad = int(electricidad)
+        elasticidad = int(elasticidad)
         volar = int(volar)
         regeneracion = int(regeneracion)
-        
-        suma = (velocidad+fuerza+inteligencia+defensa+magia+telepatia+estratega+electricidad+volar+regeneracion)
+
+        suma = (velocidad+fuerza+inteligencia+defensa+magia+telepatia+estratega+elasticidad+volar+regeneracion)
 
         if suma != 100:
             messagebox.showerror("Error","Los poderes deben sumar 100 de poder")
@@ -300,7 +300,7 @@ class General:
             luchadores.write("Magia:"+str(magia) +"\n")
             luchadores.write("Telepatia:"+str(telepatia) +"\n")
             luchadores.write("Estratega:"+str(estratega) +"\n")
-            luchadores.write("Electricidad:"+str(electricidad) +"\n")
+            luchadores.write("Elasticidad:"+str(elasticidad) +"\n")
             luchadores.write("Volar:"+str(volar) +"\n")
             luchadores.write("Regeneracion:"+str(regeneracion) +"\n")
             luchadores.write("-------------------------------------"+"\n")
@@ -707,4 +707,4 @@ class General:
 
 
 G = General()
-G.ventanaPrincipal()
+G.menuPrincipal()
