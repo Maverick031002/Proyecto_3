@@ -1,0 +1,165 @@
+Tipo:Heroe
+Genero:Hombre
+Nombre:Arthur Curry
+Alter Ego:Aquaman
+Velocidad:10
+Fuerza:10
+Inteligencia:30
+Defensa:10
+Magia:0
+Telepatia:10
+Estratega:20
+Elasticidad:0
+Volar:0
+Regeneracion:10
+-------------------------------------
+Tipo:Heroe
+Genero:Hombre
+Nombre:Superman
+Alter Ego:Kal El
+Velocidad:10
+Fuerza:10
+Inteligencia:10
+Defensa:10
+Magia:10
+Telepatia:10
+Estratega:10
+Elasticidad:10
+Volar:10
+Regeneracion:10
+-------------------------------------
+Tipo:Heroe
+Genero:Mujer
+Nombre:Diana
+Alter Ego:Wonder Woman
+Velocidad:10
+Fuerza:10
+Inteligencia:10
+Defensa:10
+Magia:10
+Telepatia:10
+Estratega:10
+Elasticidad:10
+Volar:10
+Regeneracion:10
+-------------------------------------
+Tipo:Heroe
+Genero:Hombre
+Nombre:Bruce Wayne
+Alter Ego:Batman
+Velocidad:0
+Fuerza:0
+Inteligencia:50
+Defensa:0
+Magia:0
+Telepatia:0
+Estratega:50
+Elasticidad:0
+Volar:0
+Regeneracion:0
+-------------------------------------
+Tipo:Heroe
+Genero:Hombre
+Nombre:Thor
+Alter Ego:Thor
+Velocidad:10
+Fuerza:30
+Inteligencia:0
+Defensa:30
+Magia:10
+Telepatia:0
+Estratega:10
+Elasticidad:0
+Volar:10
+Regeneracion:0
+-------------------------------------
+Tipo:Heroe
+Genero:Hombre
+Nombre:Tony Start
+Alter Ego:Iroman
+Velocidad:10
+Fuerza:10
+Inteligencia:30
+Defensa:0
+Magia:10
+Telepatia:0
+Estratega:30
+Elasticidad:0
+Volar:10
+Regeneracion:0
+-------------------------------------
+Tipo:Villano
+Genero:Hombre
+Nombre:Lex Lutor
+Alter Ego:Lex Lutor
+Velocidad:0
+Fuerza:0
+Inteligencia:50
+Defensa:0
+Magia:0
+Telepatia:0
+Estratega:50
+Elasticidad:0
+Volar:0
+Regeneracion:0
+-------------------------------------
+Tipo:Heroe
+Genero:Mujer
+Nombre:Natasha
+Alter Ego:Viuda negra
+Velocidad:0
+Fuerza:10
+Inteligencia:20
+Defensa:40
+Magia:0
+Telepatia:0
+Estratega:30
+Elasticidad:0
+Volar:0
+Regeneracion:0
+-------------------------------------
+Tipo:Heroe
+Genero:Hombre
+Nombre:Barry Alen
+Alter Ego:Flash
+Velocidad:90
+Fuerza:0
+Inteligencia:10
+Defensa:0
+Magia:0
+Telepatia:0
+Estratega:0
+Elasticidad:0
+Volar:0
+Regeneracion:0
+-------------------------------------
+Tipo:Heroe
+Genero:Hombre
+Nombre:Rollers
+Alter Ego:Capitan America
+Velocidad:10
+Fuerza:40
+Inteligencia:10
+Defensa:10
+Magia:0
+Telepatia:0
+Estratega:30
+Elasticidad:0
+Volar:0
+Regeneracion:0
+-------------------------------------
+Tipo:Heroe
+Genero:Hombre
+Nombre:Peter 
+Alter Ego:Hombre araña
+Velocidad:10
+Fuerza:10
+Inteligencia:20
+Defensa:10
+Magia:0
+Telepatia:0
+Estratega:50
+Elasticidad:0
+Volar:0
+Regeneracion:0
+-------------------------------------
