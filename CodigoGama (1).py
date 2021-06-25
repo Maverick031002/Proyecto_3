@@ -4,6 +4,11 @@ from tkinter import messagebox
 from tkinter import ttk
 import random
 from statistics import mode
+from PIL import Image,ImageTk
+import time
+import os
+from tkinter import filedialog
+
 
 #################################################################################################################################################
 """
@@ -83,6 +88,10 @@ class definicionDePersonajes:
             else:
                 self.caracteristicas += [almacenar]
                 contador = 0
+
+    def imprimirAlterEgo(self):
+        print(self.AlterEgo)
+        print(self.Tipo)
                 
                 
                 
@@ -128,13 +137,13 @@ class General:
     def menuPrincipal(self):
         pantalla = tk.Tk()
         pantalla.geometry("600x300")
-        pantalla.title("El Gran Torneo")
+        pantalla.title("Menú Principal")
         pantalla.config(bg = "orange")
 
         def crear_borrar_character():
             pantalla.destroy()
             G.crear_borrar_character()
-        boton1 = tk.Button(pantalla,text = "Nuevo Character",font=("Times new roman","12"),bg = ("#F57F17"),
+        boton1 = tk.Button(pantalla,text = "Nuevo Personaje",font=("Times new roman","12"),bg = ("#F57F17"),
                           command =crear_borrar_character)
         boton1.place(x=100,y=60)
 
@@ -168,7 +177,7 @@ class General:
     def ventanaPrincipal(self):
         pantalla = tk.Tk()
         pantalla.geometry("600x300")
-        pantalla.title("El Gran Torneo")
+        pantalla.title("Usuario")
         pantalla.config(bg = "orange")
         
         etiquetaNombre=tk.Label(pantalla,bg = "orange",text="Nombre completo:",font=("Modern No. 20","12"))
@@ -234,9 +243,19 @@ class General:
 
     def crear_borrar_character(self):
         pantalla = tk.Tk()
-        pantalla.geometry("1200x600")
-        pantalla.title("El Gran Torneo")
+        pantalla.geometry("1000x500")
+        pantalla.title("Crear personaje")
         pantalla.config(bg = "orange")
+        """ 
+        img = Image.open("WhatsApp Image 2021-06-24 at 3.45.15 PM.jpg")
+        new_img=img.resize((1000,500))
+        render=ImageTk.PhotoImage(new_img)
+        img1=Label(pantalla,image=render)
+        img1.image=render
+        img1.place(x=0,y=0)
+        """
+       
+
         cont = []
 
         for num in range (0,100):
@@ -338,24 +357,28 @@ class General:
         combo10['values'] = cont
         combo10.place(x=200,y=290)
 
+        
+
         def Validar():
             G.validar_character(entrada1.get(),entrada2.get(),entrada3.get(),
                                            entrada4.get(),combo1.get(),combo2.get(),combo3.get(),combo4.get(),combo5.get(),combo6.get(),
                                            combo7.get(),combo8.get(),combo9.get(),combo10.get())
             pantalla.destroy()
 
-        boton = tk.Button(pantalla,text = "Agregar",font=("Times new roman","12"),
+        boton = tk.Button(pantalla,text = "Agregar personaje",font=("Times new roman","12"),
                          command = Validar)
                     
         boton.place(x=700,y=130)
+
+        
         
         def eliminar():
             G.eliminar_character()
-        boton2 = tk.Button(pantalla,text = "Eliminar",font=("Times new roman","12"),
+        boton2 = tk.Button(pantalla,text = "Eliminar personaje",font=("Times new roman","12"),
                          command = eliminar)
-        boton2.place(x=800,y=130)
+        boton2.place(x=700,y=180)
 
-         
+        pantalla.mainloop() 
 
     def validar_character(self,tipo,genero,nombre,alterEgo,velocidad,fuerza,inteligencia,defensa,magia,telepatia,estratega,elasticidad,volar,regeneracion):
         velocidad = int(velocidad)
@@ -372,7 +395,7 @@ class General:
         suma = (velocidad+fuerza+inteligencia+defensa+magia+telepatia+estratega+elasticidad+volar+regeneracion)
 
         if suma != 100:
-            messagebox.showerror("Error","Los poderes deben sumar 100 de poder")
+            messagebox.showerror("Error","Los atributos del personaje deben sumar 100")
             
         else:
             luchadores = open("Luchadores.txt","a")
@@ -393,35 +416,33 @@ class General:
             luchadores.write("-------------------------------------"+"\n")
             luchadores.close()
             messagebox.showinfo(title = "Luchador añadido",message = "¡El Luchador se ha registrado exitosamente!")
+
+     
             
 #################################################################################################################################################
 
-    #Nomnbre: eliminar_empresa
-    #Entradas: No recibe
-    #Salidas: Generar un menu de eliminar empresa
-    #Restricciones: No recibe
+
             
     def eliminar_character(self):
         window = tk.Tk()
-        window.geometry("600x300")
+        window.geometry("420x150")
         window.config(bg = "orange")
-        window.title("Eliminando Personaje")
+        window.title("Eliminar Personaje")
         
-        etiqueta1 = tk.Label(window, text = "Alter Ego a eliminar").pack()
+        etiqueta1 = tk.Label(window, text = "Alter Ego a eliminar").place(x=10,y=20)
         AlterEgo = tk.Entry(window,text = "", font=("Times new roman","12"), bg="white", fg="Black")
-        AlterEgo.pack()
+        AlterEgo.place(x=230,y=20)
 
-    #Pasa los datos a la siguiente funcion
+    
         def eliminar_luchador():
             variable = AlterEgo.get()
             G.eliminar_luchador2(variable)
         
         tk.Button(window,text="Eliminar",font = ("Times new roman","12"),bg="#e7c4e5",fg="Black",
-                  command =  eliminar_luchador).pack()
+                  command =  eliminar_luchador).place(x=230,y=50)
         
         window.mainloop()
 
-    #Verifica si la cedula de la empresa que va a eliminar esta en el archivo
     def eliminar_luchador2(self,alterEgo):
         open_file = open("Luchadores.txt")
         luchadores = open_file.readlines()
@@ -468,7 +489,7 @@ class General:
     def crear_borrar_torneo(self):
         pantalla = tk.Tk()
         pantalla.geometry("500x300")
-        pantalla.title("El Gran Torneo")
+        pantalla.title("Crear Torneo")
         pantalla.config(bg = "orange")
         cont = []
 
@@ -495,21 +516,31 @@ class General:
         etiquetaFecha.place(x=40,y=200)
         entrada4 = tk.Entry(pantalla, text="",font=("Modern No. 20","12"))
         entrada4.place(x=40,y=230)
+
+        def eliminar():
+            G.eliminarTorneo()
+            pantalla.destroy()
+        botonEliminar = tk.Button(pantalla,text = "Eliminar Torneo",font=("Times new roman","12"),
+                         command = eliminar)
+        botonEliminar.place(x=320,y=240)
         
         def Manual():
             G.manual(entrada1.get(),entrada2.get(),entrada3.get(),entrada4.get())
+            pantalla.destroy()
         boton = tk.Button(pantalla,text = "Manual",font=("Times new roman","12"),
                          command = Manual)
         boton.place(x=343,y=75)
         
         def Persona_vs_Programa():
              G.persona_vs_programa(entrada1.get(),entrada2.get(),entrada3.get(),entrada4.get())
+             pantalla.destroy()
         boton2 = tk.Button(pantalla,text = "Persona vs Programa",font=("Times new roman","12"),
                          command = Persona_vs_Programa)
         boton2.place(x=300,y=135)
 
         def Programa_vs_Programa():
             G.programa_vs_programa(entrada1.get(),entrada2.get(),entrada3.get(),entrada4.get())
+            pantalla.destroy()
         boton3 = tk.Button(pantalla,text = "Programa vs Programa",font=("Times new roman","12"),
                          command = Programa_vs_Programa)
         boton3.place(x=296,y=195)
@@ -604,23 +635,27 @@ class General:
                                                                                     entrada8.get(),entrada4.get(),entrada9.get(),entrada5.get(),entrada10.get()])
                             self.torneo += [torneo1]
                             G.menuPrincipal()
+                            messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                             pantalla.destroy()
                         else:
                             torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,[entrada1.get(),entrada6.get(),entrada2.get(),entrada7.get(),entrada3.get(),
                                                                                     entrada8.get(),entrada4.get(),entrada9.get()])
                             self.torneo += [torneo1]
                             G.menuPrincipal()
+                            messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                             pantalla.destroy()
                     else:
                         torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,[entrada1.get(),entrada6.get(),entrada2.get(),entrada7.get(),entrada3.get(),
                                                                                    entrada8.get()])
                         self.torneo += [torneo1]
                         G.menuPrincipal()
+                        messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                         pantalla.destroy()
                 else:
                     torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,[entrada1.get(),entrada6.get(),entrada2.get(),entrada7.get()])
                     self.torneo += [torneo1]
                     G.menuPrincipal()
+                    messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                     pantalla.destroy()
             else:
                 torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,[entrada1.get(),entrada6.get()])
@@ -709,27 +744,32 @@ class General:
                                                                                     entrada4.get(),maquina[3],entrada5.get(),maquina[4]])
                             self.torneo += [torneo1]
                             G.menuPrincipal()
+                            messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                             pantalla.destroy()
                         else:
                             torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,[entrada1.get(),maquina[0],entrada2.get(),maquina[1],entrada3.get(),maquina[2],
                                                                                     entrada4.get(),maquina[3]])
                             self.torneo += [torneo1]
                             G.menuPrincipal()
+                            messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                             pantalla.destroy()
                     else:
                         torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,[entrada1.get(),maquina[0],entrada2.get(),maquina[1],entrada3.get(),maquina[2]])
                         self.torneo += [torneo1]
                         G.menuPrincipal()
+                        messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                         pantalla.destroy()
                 else:
                     torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,[entrada1.get(),maquina[0],entrada2.get(),maquina[1]])
                     self.torneo += [torneo1]
                     G.menuPrincipal()
+                    messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                     pantalla.destroy()
             else:
                 torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,[entrada1.get(),maquina[0]])
                 self.torneo += [torneo1]
                 G.menuPrincipal()
+                messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                 pantalla.destroy()
                                            
 
@@ -771,31 +811,71 @@ class General:
                             torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,maquina)
                             self.torneo += [torneo1]
                             G.menuPrincipal()
+                            messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                             pantalla.destroy()
                         else:
                             torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,maquina)
                             self.torneo += [torneo1]
                             G.menuPrincipal()
+                            messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                             pantalla.destroy()
                     else:
                         torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,maquina)
                         self.torneo += [torneo1]
                         G.menuPrincipal()
+                        messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                         pantalla.destroy()
                 else:
                     torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,maquina)
                     self.torneo += [torneo1]
                     G.menuPrincipal()
+                    messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                     pantalla.destroy()
             else:
                 torneo1 = definiciónDeTorneo(nombre,fecha,lugar,luchas,maquina)
                 self.torneo += [torneo1]
                 G.menuPrincipal()
+                messagebox.showinfo("Torneo creado","El torneo ha sido creado")
                 pantalla.destroy()
                                            
 
         boton3 = tk.Button(pantalla,text = "Continuar",font=("Times new roman","12"),command = validar_programa_vs_programa)
         boton3.place(x=296,y=195)
+
+    def eliminarTorneo(self):
+        window = tk.Tk()
+        window.geometry("420x150")
+        window.config(bg = "orange")
+        window.title("Eliminar Torneo")
+
+        etiqueta1 = tk.Label(window, text = "Torneo a eliminar").place(x=10,y=20)
+        eliminarTorneos = []
+        for indice in self.torneo:
+            eliminarTorneos += [indice.NombreTorneo]
+        Entrada = ttk.Combobox(window,values = eliminarTorneos) 
+        Entrada.place(x=230,y=20)
+
+        def eliminarT():
+            if Entrada.get() != "":
+                contador = 0
+                for indice in self.torneo:
+                    if indice.NombreTorneo == Entrada:
+                        self.torneo.pop(contador)
+                        window.destroy()
+                        messagebox.showinfo("Eliminar","El torneo ha sido eliminado")
+                        G.menuPrincipal()
+                        break
+                    else:
+                        contador += 1
+                else:
+                    messagebox.showerror("Eliminar","El torneo no se encontro")
+            else:
+                messagebox.showerror("Eliminar","No selecciono ningun torneo")
+
+        boton = tk.Button(window,text = "Eliminar Torneo",font=("Times new roman","12"),command = eliminarT)
+        boton.place(x=200,y=90)
+        
+        
 
     def start(self):
         pantallaJugar = tk.Tk()
@@ -857,7 +937,9 @@ class General:
                                 Archivo = open("Luchas.txt","a")
                                 Archivo.write("AlterEgoLuchador1:"+Luchas[0][10:])
                                 Archivo.write("AlterEgoLuchador2:"+Luchas[1][10:])
-                                Archivo.write("Numero de Round:"+"3"+"\n")
+                                Archivo.write("Ganador del 1er Round:"+Victorias[0])
+                                Archivo.write("Ganador del 2do Round:"+Victorias[1])
+                                Archivo.write("Ganador del 3er Round:"+Victorias[2])
                                 Archivo.write("AlterEgoGanador:"+Luchas[0][10:])
                                 Archivo.write("Nombre Torneo:"+entrada1+"\n")
                                 Archivo.write("....................................."+"\n")
@@ -868,7 +950,9 @@ class General:
                                 Archivo = open("Luchas.txt","a")
                                 Archivo.write("AlterEgoLuchador1:"+Luchas[0][10:])
                                 Archivo.write("AlterEgoLuchador2:"+Luchas[1][10:])
-                                Archivo.write("Numero de Round:"+"3"+"\n")
+                                Archivo.write("Ganador del 1er Round:"+Victorias[0])
+                                Archivo.write("Ganador del 2do Round:"+Victorias[1])
+                                Archivo.write("Ganador del 3er Round:"+Victorias[2])
                                 Archivo.write("AlterEgoGanador:"+Luchas[1][10:])
                                 Archivo.write("Nombre Torneo:"+entrada1+"\n")
                                 Archivo.write("....................................."+"\n")
@@ -926,7 +1010,6 @@ class General:
         contador = 0
         for almacenar in Abrir2:
             if contador == 3:
-                print(G.validacionHero([almacenar[16:-1]]))
                 if G.validacionHero([almacenar[16:-1]]):
                     contador += 1
                     almacenarHeroes += [almacenar[16:-1]]
@@ -958,7 +1041,7 @@ class General:
                         contador += 1
 
                 else:
-                    if datos2 == Abrir2[contador//2+3]:
+                    if datos2 in Abrir2[contador//2+3]:
                         contador += 1
                     else:
                         derrotasVillanos += [datos2]
@@ -973,7 +1056,7 @@ class General:
                         derrotasHeroes += [datos2]
                         contador += 1
                 else:
-                    if datos2 == Abrir2[contador//2+3]:
+                    if datos2 in Abrir2[contador//2+3]:
                         contador += 1
 
                     else:
@@ -982,7 +1065,7 @@ class General:
     
         HEROES = []
         VILLANOS = []
-        print(Total)
+       
         for datos3 in Total:
             
             if G.validacionHero(datos3):
@@ -1006,21 +1089,21 @@ class General:
                 villanoTorneo += 1
 
 
-        print(almacenarHeroes)  
+         
         
         lista = Listbox(pantalla, font=("Times New Roman",14),
                              bg="DeepSkyBlue4", fg="Black",
                       width=55, height=10)
         lista.pack()
-        lista.insert(0,"Cantidad de torneos realizados"+str(cantidadTorneos//7))
-        lista.insert(1,"Cantidad de Héroes creados"+str(cantidadHeroes))
-        lista.insert(2,"Cantidad de Villanos creados"+str(cantidadVillanos))
-        lista.insert(3,f"Héroe con más luchas ganadas {mode(almacenarHeroes)}")
-        lista.insert(4,f"Héroe con más luchas perdidas{mode(derrotasHeroes)}")
-        lista.insert(5,f"Villano con más luchas ganadas{mode(almacenarVillanos)}")
-        lista.insert(6,f"Villano con más luchas perdidas{mode(derrotasVillanos)}")
-        lista.insert(7,"El Héroe con más números de torneos que aparece (total)"+repetibleHeroe)
-        lista.insert(8,"El Villano con más números de torneos que aparece (total)"+repetibleVillano)
+        lista.insert(0,"Cantidad de torneos realizados:"+str(cantidadTorneos//7))
+        lista.insert(1,"Cantidad de Héroes creados:"+str(cantidadHeroes))
+        lista.insert(2,"Cantidad de Villanos creados:"+str(cantidadVillanos))
+        lista.insert(3,f"Héroe con más luchas ganadas:{mode(almacenarHeroes)}")
+        lista.insert(4,f"Héroe con más luchas perdidas:{mode(derrotasHeroes)}")
+        lista.insert(5,f"Villano con más luchas ganadas:{mode(almacenarVillanos)}")
+        lista.insert(6,f"Villano con más luchas perdidas:{mode(derrotasVillanos)}")
+        lista.insert(7,"El Héroe con más números de torneos que aparece(total):"+repetibleHeroe)
+        lista.insert(8,"El Villano con más números de torneos que aparece(total):"+repetibleVillano)
         
         
 
@@ -1039,8 +1122,8 @@ class General:
         contador = 0
         for variable in llamarClass.Tipo:
             if variable == "Heroe":
-                
-                if alterEgo == llamarClass.AlterEgo[contador]:
+               
+                if llamarClass.AlterEgo[contador] in alterEgo:
                     return True
                 else:
                     contador += 1
@@ -1051,4 +1134,4 @@ class General:
         
 
 G = General()
-G.menuPrincipal()
+G.ventanaPrincipal()
