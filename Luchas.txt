@@ -1,180 +1,40 @@
 AlterEgoLuchador1:Aquaman
-AlterEgoLuchador2:Thor
-Numero de Round:3
-AlterEgoGanador:Thor
-Nombre Torneo:to
-.....................................
-AlterEgoLuchador1:Wonder Woman
-AlterEgoLuchador2:Iroman
-Numero de Round:3
-AlterEgoGanador:Iroman
-Nombre Torneo:to
-.....................................
-AlterEgoLuchador1:Kal El
-AlterEgoLuchador2:Viuda negra
-Numero de Round:3
-AlterEgoGanador:Viuda negra
-Nombre Torneo:to
-.....................................
-AlterEgoLuchador1:Aquaman
-AlterEgoLuchador2:Thor
-Numero de Round:3
-AlterEgoGanador:Thor
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Kal El
-AlterEgoLuchador2:Iroman
-Numero de Round:3
-AlterEgoGanador:Iroman
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Wonder Woman
-AlterEgoLuchador2:Lex Lutor
-Numero de Round:3
-AlterEgoGanador:Lex Lutor
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Batman
-AlterEgoLuchador2:Viuda negra
-Numero de Round:3
-AlterEgoGanador:Viuda negra
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Flash
-AlterEgoLuchador2:Capitan America
-Numero de Round:3
-AlterEgoGanador:Capitan America
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Aquaman
-AlterEgoLuchador2:Thor
-Numero de Round:3
-AlterEgoGanador:Thor
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Kal El
-AlterEgoLuchador2:Iroman
-Numero de Round:3
-AlterEgoGanador:Iroman
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Wonder Woman
-AlterEgoLuchador2:Viuda negra
-Numero de Round:3
-AlterEgoGanador:Viuda negra
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Batman
-AlterEgoLuchador2:Capitan America
-Numero de Round:3
-AlterEgoGanador:Capitan America
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Flash
-AlterEgoLuchador2:Hombre araña
-Numero de Round:3
-AlterEgoGanador:Hombre araña
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Aquaman
-AlterEgoLuchador2:Thor
-Numero de Round:3
-AlterEgoGanador:Thor
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Kal El
-AlterEgoLuchador2:Iroman
-Numero de Round:3
-AlterEgoGanador:Iroman
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Wonder Woman
-AlterEgoLuchador2:Viuda negra
-Numero de Round:3
-AlterEgoGanador:Viuda negra
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Batman
-AlterEgoLuchador2:Capitan America
-Numero de Round:3
-AlterEgoGanador:Capitan America
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Flash
-AlterEgoLuchador2:Hombre araña
-Numero de Round:3
-AlterEgoGanador:Hombre araña
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Iroman
-AlterEgoLuchador2:Lex Lutor
-Numero de Round:3
-AlterEgoGanador:Lex Lutor
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Kal El
-AlterEgoLuchador2:Hombre araña
-Numero de Round:3
-AlterEgoGanador:Hombre araña
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Batman
-AlterEgoLuchador2:Flash
-Numero de Round:3
-AlterEgoGanador:Flash
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Capitan America
-AlterEgoLuchador2:Wonder Woman
-Numero de Round:3
-AlterEgoGanador:Wonder Woman
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Thor
-AlterEgoLuchador2:Viuda negra
-Numero de Round:3
-AlterEgoGanador:Viuda negra
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Kal El
-AlterEgoLuchador2:Wonder Woman
-Numero de Round:3
-AlterEgoGanador:Wonder Woman
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Flash
-AlterEgoLuchador2:Batman
-Numero de Round:3
-AlterEgoGanador:Batman
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Aquaman
-AlterEgoLuchador2:Iroman
-Numero de Round:3
-AlterEgoGanador:Iroman
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Hombre araña
-AlterEgoLuchador2:Thor
-Numero de Round:3
-AlterEgoGanador:Thor
-Nombre Torneo:t
-.....................................
-AlterEgoLuchador1:Capitan America
-AlterEgoLuchador2:Lex Lutor
-Numero de Round:3
-AlterEgoGanador:Lex Lutor
-Nombre Torneo:t
+AlterEgoLuchador2:Ironman
+Ganador del 1er Round:Ironman
+Ganador del 2do Round:Ironman
+Ganador del 3er Round:Aquaman
+AlterEgoGanador:Ironman
+Nombre Torneo:Torneo galactico
 .....................................
 AlterEgoLuchador1:Viuda negra
-AlterEgoLuchador2:Capitan America
-Numero de Round:3
-AlterEgoGanador:Capitan America
-Nombre Torneo:t
+AlterEgoLuchador2:Lex Luthor
+Ganador del 1er Round:Viuda negra
+Ganador del 2do Round:Lex Luthor
+Ganador del 3er Round:Lex Luthor
+AlterEgoGanador:Lex Luthor
+Nombre Torneo:Cell
 .....................................
-AlterEgoLuchador1:Kal El
+AlterEgoLuchador1:Superman
 AlterEgoLuchador2:Aquaman
-Numero de Round:3
-AlterEgoGanador:Kal El
-Nombre Torneo:t
+Ganador del 1er Round:Aquaman
+Ganador del 2do Round:Aquaman
+Ganador del 3er Round:Superman
+AlterEgoGanador:Aquaman
+Nombre Torneo:Cell
+.....................................
+AlterEgoLuchador1:Batman
+AlterEgoLuchador2:Capitan America
+Ganador del 1er Round:Capitan America
+Ganador del 2do Round:Capitan America
+Ganador del 3er Round:Batman
+AlterEgoGanador:Capitan America
+Nombre Torneo:Cell
+.....................................
+AlterEgoLuchador1:Superman
+AlterEgoLuchador2:Ironman
+Ganador del 1er Round:Superman
+Ganador del 2do Round:Ironman
+Ganador del 3er Round:Ironman
+AlterEgoGanador:Ironman
+Nombre Torneo:Torneo galactico
 .....................................

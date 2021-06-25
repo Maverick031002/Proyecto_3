@@ -1,91 +1,14 @@
-Nombre Torneo:t
-Fecha:23
-Lugar:s
-Numero de luchas:1
-VictoriasBando1:0
-VictoriasBando2:1
-.....................................
-Nombre Torneo:t
-Fecha:23
-Lugar:s
-Numero de luchas:1
-VictoriasBando1:0
-VictoriasBando2:1
-.....................................
-Nombre Torneo:t
-Fecha:23
-Lugar:s
-Numero de luchas:1
-VictoriasBando1:0
-VictoriasBando2:1
-.....................................
-Nombre Torneo:to
-Fecha:23/06
-Lugar:sa
-Numero de luchas:1
-VictoriasBando1:0
-VictoriasBando2:1
-.....................................
-Nombre Torneo:to
-Fecha:23
-Lugar:sa
+Nombre Torneo:Cell
+Fecha:22/06/2021
+Lugar:Galaxia
 Numero de luchas:2
 VictoriasBando1:0
 VictoriasBando2:2
 .....................................
-Nombre Torneo:to
-Fecha:23
-Lugar:san
-Numero de luchas:3
-VictoriasBando1:0
-VictoriasBando2:3
-.....................................
-Nombre Torneo:t
-Fecha:23
-Lugar:s
-Numero de luchas:5
-VictoriasBando1:0
-VictoriasBando2:5
-.....................................
-Nombre Torneo:t
-Fecha:23
-Lugar:s
-Numero de luchas:5
-VictoriasBando1:0
-VictoriasBando2:5
-.....................................
-Nombre Torneo:t
-Fecha:23
-Lugar:s
-Numero de luchas:5
-VictoriasBando1:0
-VictoriasBando2:5
-.....................................
-Nombre Torneo:t
-Fecha:23
-Lugar:s
-Numero de luchas:5
-VictoriasBando1:0
-VictoriasBando2:5
-.....................................
-Nombre Torneo:t
-Fecha:23
-Lugar:s
-Numero de luchas:5
-VictoriasBando1:0
-VictoriasBando2:5
-.....................................
-Nombre Torneo:t
-Fecha:23
-Lugar:s
+Nombre Torneo:Torneo galactico
+Fecha:23/06/2021
+Lugar:Santuario
 Numero de luchas:1
 VictoriasBando1:0
 VictoriasBando2:1
-.....................................
-Nombre Torneo:t
-Fecha:23
-Lugar:s
-Numero de luchas:1
-VictoriasBando1:1
-VictoriasBando2:0
 .....................................

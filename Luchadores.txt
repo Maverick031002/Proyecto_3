@@ -15,8 +15,8 @@ Regeneracion:10
 -------------------------------------
 Tipo:Heroe
 Genero:Hombre
-Nombre:Superman
-Alter Ego:Kal El
+Nombre:Clark Kent
+Alter Ego:Superman
 Velocidad:10
 Fuerza:10
 Inteligencia:10
@@ -30,7 +30,7 @@ Regeneracion:10
 -------------------------------------
 Tipo:Heroe
 Genero:Mujer
-Nombre:Diana
+Nombre:Diana Prince
 Alter Ego:Wonder Woman
 Velocidad:10
 Fuerza:10
@@ -75,8 +75,8 @@ Regeneracion:0
 -------------------------------------
 Tipo:Heroe
 Genero:Hombre
-Nombre:Tony Start
-Alter Ego:Iroman
+Nombre:Tony Stark
+Alter Ego:Ironman
 Velocidad:10
 Fuerza:10
 Inteligencia:30
@@ -90,8 +90,8 @@ Regeneracion:0
 -------------------------------------
 Tipo:Villano
 Genero:Hombre
-Nombre:Lex Lutor
-Alter Ego:Lex Lutor
+Nombre:Lex Luthor
+Alter Ego:Lex Luthor
 Velocidad:0
 Fuerza:0
 Inteligencia:50
@@ -120,7 +120,7 @@ Regeneracion:0
 -------------------------------------
 Tipo:Heroe
 Genero:Hombre
-Nombre:Barry Alen
+Nombre:Barry Allen
 Alter Ego:Flash
 Velocidad:90
 Fuerza:0
@@ -135,7 +135,7 @@ Regeneracion:0
 -------------------------------------
 Tipo:Heroe
 Genero:Hombre
-Nombre:Rollers
+Nombre:Steve Rogers
 Alter Ego:Capitan America
 Velocidad:10
 Fuerza:40
@@ -150,7 +150,7 @@ Regeneracion:0
 -------------------------------------
 Tipo:Heroe
 Genero:Hombre
-Nombre:Peter 
+Nombre:Peter Parker
 Alter Ego:Hombre araña
 Velocidad:10
 Fuerza:10
