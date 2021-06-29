@@ -250,6 +250,7 @@ class General:
         #Restriccion: No tiene 
         def Acceso():
             G.control_acceso(entrada1.get(),entrada2.get(),entrada3.get())
+            pantalla.destroy()
         boton = tk.Button(pantalla,text = "Ingresar",font=("Times new roman","12"),
                           command =Acceso )
         boton.place(x=300,y=130)
@@ -277,11 +278,14 @@ class General:
                  if "Contraseña:"+contraseña+"\n" in Verificar[indice+2]:
                      G.menuPrincipal()
                  else:
+                     G.ventanaPrincipal()
                      messagebox.showerror("Error","Contraseña incorrecta")
              else:
-                  messagebox.showerror("Error","Usuario incorrecto")
+                 G.ventanaPrincipal()
+                 messagebox.showerror("Error","Usuario incorrecto")
          else:
-              messagebox.showerror("Error","Nombre incorrecto")
+             G.ventanaPrincipal()
+             messagebox.showerror("Error","Nombre incorrecto")
               
     #Nombre: registrar_usuario
     #Entradas: 3 entradas
@@ -575,7 +579,7 @@ class General:
         pantalla.config(bg = "orange")
         cont = []
 
-        for num in range (0,6):
+        for num in range (1,6):
             cont += [num]
 
         etiquetaNumeroLuchas=tk.Label(pantalla,bg = "orange",text="Numero de luchas:",font=("Modern No. 20","12"))
@@ -615,8 +619,12 @@ class General:
         #Salidas: llamar una funcion
         #Restriccion: No tiene
         def Manual():
-            G.manual(entrada1.get(),entrada2.get(),entrada3.get(),entrada4.get())
-            pantalla.destroy()
+            if(entrada1.get()!="")and entrada2.get() !="" and entrada3.get()!="" and entrada4.get()!="":
+                G.manual(entrada1.get(),entrada2.get(),entrada3.get(),entrada4.get())
+                pantalla.destroy()
+            else:
+                messagebox.showinfo("Error","Debe llenar los espacios solicitados")
+
         boton = tk.Button(pantalla,text = "Manual",font=("Times new roman","12"),
                          command = Manual)
         boton.place(x=343,y=75)
@@ -626,8 +634,12 @@ class General:
         #Salidas: llamar una funcion
         #Restriccion: No tiene
         def Persona_vs_Programa():
-             G.persona_vs_programa(entrada1.get(),entrada2.get(),entrada3.get(),entrada4.get())
-             pantalla.destroy()
+             if(entrada1.get()!="")and entrada2.get() !="" and entrada3.get()!="" and entrada4.get()!="":
+                G.persona_vs_programa(entrada1.get(),entrada2.get(),entrada3.get(),entrada4.get())
+                pantalla.destroy()
+             else:
+                 messagebox.showinfo("Error","debe de llenar los espacios solicitados")
+                
         boton2 = tk.Button(pantalla,text = "Persona vs Programa",font=("Times new roman","12"),
                          command = Persona_vs_Programa)
         boton2.place(x=300,y=135)
@@ -637,8 +649,12 @@ class General:
         #Salidas: llamar una funcion
         #Restriccion: No tiene
         def Programa_vs_Programa():
-            G.programa_vs_programa(entrada1.get(),entrada2.get(),entrada3.get(),entrada4.get())
-            pantalla.destroy()
+            if(entrada1.get()!="")and entrada2.get() !="" and entrada3.get()!="" and entrada4.get()!="":
+                G.programa_vs_programa(entrada1.get(),entrada2.get(),entrada3.get(),entrada4.get())
+                pantalla.destroy()
+            else:
+                messagebox.showinfo("Error","debe de llenar los espacios solicitados")
+                
         boton3 = tk.Button(pantalla,text = "Programa vs Programa",font=("Times new roman","12"),
                          command = Programa_vs_Programa)
         boton3.place(x=296,y=195)
@@ -988,7 +1004,7 @@ class General:
             if Entrada.get() != "":
                 contador = 0
                 for indice in self.torneo:
-                    if indice.NombreTorneo == Entrada:
+                    if indice.NombreTorneo == Entrada.get():
                         self.torneo.pop(contador)
                         window.destroy()
                         messagebox.showinfo("Eliminar","El torneo ha sido eliminado")
